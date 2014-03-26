@@ -1,0 +1,119 @@
+/*Fontawesome Iconfont*/
+@import url(http://thecodeplayer.com/uploads/fonts/font-awesome-4.0.1/css/font-awesome.min.css);
+/*Montserrat, Open Sans*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,300);
+
+* {margin: 0; padding: 0;}
+
+html, body { position: relative; min-height: 100%; min-width: 100%; }
+
+/*Hiding the checkbox*/
+#tm { display: none; }
+
+section {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transition: all 0.25s;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-o-transition: all 0.25s;
+}
+
+section label {
+	position: relative;
+	top: 100px;
+	left: 170px;
+	color: #fa2063; font: bold 30px Montserrat; text-align: center;
+	border-radius: 60px;
+	display: block;
+	width: 40px;
+	background-color: #eee;
+	cursor: pointer; text-transform: uppercase;
+}
+
+/*Nav styles*/
+.sidenav {
+	background-color: #bb1e4e; width: 250px;  height: 2000px;
+	overflow-y: hidden;
+	position: absolute; left: 0; top: 0; bottom: 0; padding-top: 100px;
+	opacity: 0;
+}
+
+.sidenav li {list-style-type: none; padding-left: 20px; padding-bottom: 20px;}
+.sidenav a { color: white; text-decoration: none; }
+.sidenav b {
+	color: white;
+	font: bold 14px/48px Montserrat; display: block;
+	opacity: 0;
+	transform: translateX(50px);
+	-webkit-transform: translateX(50px);
+	-moz-transform: translateX(50px);
+	-o-transform: translateX(50px);
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+.sidenav i {
+	display: block; width: 50px; float: left; 
+	font-size: 18px; line-height: 48px; text-align: center;
+}
+
+
+/*Animation controls using checkbox hack*/
+/*Animate content area to the right*/
+#tm:checked ~ section {
+	transform: translateX(250px);
+	-webkit-transform: translateX(250px);
+	-moz-transform: translateX(250px);
+	-o-transform: translateX(250px);
+}
+/*Animate links from right to left + fade in effect*/
+#tm:checked ~ .sidenav b {
+	opacity: 1; 
+	transform: translateX(0);
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-o-transform: translateX(0);
+}
+
+#tm:checked ~ .sidenav {
+	opacity: 1;
+	transition: all 0.25s;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-o-transition: all 0.25s;
+}
+
+/*Adding delay to link animation - in multiples of .08s*/
+#tm:checked ~ .sidenav li:nth-child(2) b {
+	transition-delay: 0.08s;
+	-webkit-transition-delay: 0.08s;
+	-moz-transition-delay: 0.08s;
+	-o-transition-delay: 0.08s;
+}
+#tm:checked ~ .sidenav li:nth-child(3) b {
+	transition-delay: 0.16s;
+	-webkit-transition-delay: 0.16s;
+	-moz-transition-delay: 0.16s;
+	-o-transition-delay: 0.16s;
+}
+#tm:checked ~ .sidenav li:nth-child(4) b {
+	transition-delay: 0.24s;
+	-webkit-transition-delay: 0.24s;
+	-moz-transition-delay: 0.24s;
+	-o-transition-delay: 0.24s;
+}
+#tm:checked ~ .sidenav li:nth-child(5) b {
+	transition-delay: 0.32s;
+	-webkit-transition-delay: 0.32s;
+	-moz-transition-delay: 0.32s;
+	-o-transition-delay: 0.32s;
+}
+#tm:checked ~ .sidenav li:nth-child(6) b {
+	transition-delay: 0.40s;
+	-webkit-transition-delay: 0.40s;
+	-moz-transition-delay: 0.40s;
+	-o-transition-delay: 0.40s;
+}

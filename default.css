@@ -1,0 +1,257 @@
+/*Montserrat*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html, body {overflow-y: hidden;}
+
+body {
+	background: #fff;
+	width: 3300px;
+	position: relative;
+}
+
+h1 {
+	position: absolute;
+	top: 100px;
+	left: 250px;
+	font: bold 28px/36px Montserrat; text-align: left;
+	text-transform: uppercase;
+	color: #fa2063;
+	float: left;
+}
+
+.social {
+	position: fixed;
+	right: 30px;
+	top: 15px;
+}
+
+.social li {
+	float: left;
+	list-style-type: none;
+}
+
+.social li i {
+	display: block; width: 50px; 
+	font-size: 20px; line-height: 48px; text-align: center;
+	color: #ccc;
+	
+}
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #d8cbcb;
+	height: 30px;
+	padding-top: 20px;
+	padding-left: 50px;
+	font: bold 11px Montserrat;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+}
+
+.icon {
+	padding-left: 32px;
+	padding-bottom: 50px;
+	margin-top: -50px;
+}
+
+.update {
+	position: relative;
+	top: -3px;
+	padding-left: 15px;
+	color: #ccc;
+	font-style: italic;
+	font-size: 16px;
+}
+
+
+/*Thumbnail Background*/
+.thumb1, .thumb2, .thumb3, .thumb4, .thumb5 {
+	width: 400px; height: 300px; margin: 200px auto;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	float: left;
+}
+
+.more {
+	float: left;
+	position: relative;
+	top: 280px;
+	left: 150px;
+	background-color: #fa2063; 
+	color: #fff;
+	font: bold 120px Montserrat; text-align: center;
+	border-radius: 200px;
+	height: 170px;
+	padding-top: 30px;
+	width: 200px;
+	transition: all 0.25s;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-o-transition: all 0.25s;
+}
+
+.more a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.more:hover {
+	opacity: 0.6;
+	top: 302px;
+	left: 175px;
+	width: 150px;
+	height: 142px;
+	padding-top: 8px;
+	border-radius: 150px;
+}
+
+.thumb2, .thumb3, .thumb4, .thumb5 {
+	padding-left: 140px;
+}
+
+.thumb1 {
+	padding-left: 250px;
+}
+
+.thumb1 a {
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+		url("filler1.jpg");
+}
+
+.thumb2 a {
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+		url("filler2.jpg");
+}
+
+.thumb3 a {
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+		url("filler3.jpg");
+}
+
+.thumb4 a {
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+		url("filler4.jpg");
+}
+
+.thumb5 a {
+	background: 
+		linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+		url("filler5.jpg");
+}
+
+.thumb1 a, .thumb2 a, .thumb3 a, .thumb4 a, .thumb5 a {
+	display: block; width: 100%; height: 100%;
+	/*disabling the translucent black bg on the main image*/
+	background-size: 0, cover;
+	-webkit-background-size: 0, cover;
+	-moz-background-size: 0, cover;
+	-o-background-size: 0, cover;
+	/*3d space for children*/
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.thumb1:hover a, .thumb2:hover a, .thumb3:hover a, .thumb4:hover a, .thumb5:hover a {
+	transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-o-transform-origin: bottom;
+	transform: rotateX(80deg);
+	-webkit-transform: rotateX(80deg);
+	-moz-transform: rotateX(80deg);
+	-o-transform: rotateX(80deg);
+}
+
+.thumb1 a:after, .thumb2 a:after, .thumb3 a:after, .thumb4 a:after, .thumb5 a:after {
+	content: ''; position: absolute; left: 0; bottom: 0; 
+	width: 100%; height: 36px;
+	background: inherit; background-size: cover, cover;
+	background-position: bottom;
+	transform: rotateX(90deg);
+	-webkit-transform: rotateX(80deg);
+	-moz-transform: rotateX(80deg);
+	-o-transform: rotateX(80deg);
+	transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-o-transform-origin: bottom;
+}
+
+/*label style*/
+.thumb1 a span, .thumb2 a span, .thumb3 a span, .thumb4 a span, .thumb5 a span {
+	color: white; text-transform: uppercase;
+	position: absolute; top: 100%; left: 0; width: 100%;
+	font: bold 12px/36px Montserrat; text-align: center;
+	/*the rotation is a bit less than the bottom surface to avoid flickering*/
+	transform: rotateX(-89.99deg);
+	-webkit-transform: rotateX(-89.99deg);
+	-moz-transform: rotateX(-89.99deg);
+	-o-transform: rotateX(-89.99deg);
+	transform-origin: top;
+	-webkit-transform-origin: top;
+	-moz-transform-origin: top;
+	-o-transform-origin: top;
+	z-index: 1;
+}
+
+.thumb1 a span b, .thumb2 a span b, .thumb3 a span b, .thumb4 a span b, .thumb5 a span b {
+	padding-left: 15px;
+	font-weight: normal;
+}
+
+.thumb1 a span i, .thumb2 a span i, .thumb3 a span i, .thumb4 a span i, .thumb5 a span i {
+	padding-right: 5px;
+}
+
+/*shadow*/
+.thumb1 a:before, .thumb2 a:before, .thumb3 a:before, .thumb4 a:before, .thumb5 a:before {
+	content: ''; position: absolute; top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: rgba(0, 0, 0, 0.5); 
+	box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+	transition: all 0.5s; 
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	opacity: 0.15;
+	transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+	-webkit-transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+	-moz-transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+	-o-transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+	transform-origin: bottom;
+	-webkit-transform-origin: bottom;
+	-moz-transform-origin: bottom;
+	-o-transform-origin: bottom;
+}
+.thumb1:hover a:before, .thumb2:hover a:before, .thumb3:hover a:before, .thumb4:hover a:before, .thumb5:hover a:before {
+	opacity: 1;
+	box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+	transform: rotateX(0) translateZ(-60px) scale(0.85);
+	-webkit-transform: rotateX(0) translateZ(-60px) scale(0.85);
+	-moz-transform: rotateX(0) translateZ(-60px) scale(0.85);
+	-o-transform: rotateX(0) translateZ(-60px) scale(0.85);
+}
